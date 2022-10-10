@@ -397,7 +397,7 @@ section .card {
 }
 
 .gallery {
-  background-image: url("./files/img/kerja.jpg");
+  background-image: url(../../files/img/kerja.jpg);
   background-size: cover;
   height: 100vh;
   background-attachment: fixed;
@@ -414,7 +414,7 @@ section .card {
   /* color: #fff; */
   font-size: 14px;
   /* background: #222; */
-  background-image: url("./files/img/bg.png");
+  background-image: url(../../files/img/bg.png);
   background-size: cover;
 }
 
