@@ -212,7 +212,6 @@ video {
 /*--------------------------------------------------------------
 # Tombol Play Video
 --------------------------------------------------------------*/
-
 #hero .play-btn {
   width: 94px;
   height: 94px;
@@ -271,7 +270,7 @@ video {
 # Section
 --------------------------------------------------------------*/
 section {
-  padding: 40px 0;
+  padding: 30px 0;
   overflow: hidden;
 }
 
@@ -297,7 +296,6 @@ section .card {
 /*--------------------------------------------------------------
 # fancybox
 --------------------------------------------------------------*/
-
 .wadah {
   /* padding: 1rem 0; */
   margin: 0 auto;
@@ -396,6 +394,9 @@ section .card {
   padding: 40px 0 0 0;
 }
 
+/*--------------------------------------------------------------
+# Background gallery
+--------------------------------------------------------------*/
 .gallery {
   background-image: url(../../files/img/kerja.jpg);
   background-size: cover;
@@ -599,7 +600,6 @@ section .card {
 /*--------------------------------------------------------------
 # navbar button
 --------------------------------------------------------------*/
-
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
@@ -608,7 +608,9 @@ section .card {
   border-color: green;
 }
 
-/* kartu app */
+/*--------------------------------------------------------------
+# kartu app
+--------------------------------------------------------------*/
 .kartu {
   display: inline-block;
   position: relative;
@@ -706,7 +708,7 @@ section .card {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
@@ -714,5 +716,5 @@ section .card {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
