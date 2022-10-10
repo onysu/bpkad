@@ -1,9 +1,7 @@
 (function () {
   "use strict";
 
-  /**
-   * Fungsi pembantu pemilih yang mudah
-   */
+  // Fungsi pembantu pemilih yang mudah
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -13,9 +11,7 @@
     }
   }
 
-  /**
-   * Fungsi event listener yang mudah
-   */
+  // Fungsi event listener yang mudah
   const on = (type, el, listener, all = false) => {
     let selectEl = select(el, all)
     if (selectEl) {
@@ -27,16 +23,12 @@
     }
   }
 
-  /**
-   * Mudah pada scroll event listener
-   */
+  // Mudah pada scroll event listener
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
 
-  /**
-   * Navbar link status aktif aktif pada scroll
-   */
+  // Navbar link status aktif aktif pada scroll
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
@@ -54,9 +46,7 @@
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
-  /**
-   * Scroll ke elemen dengan offset header
-   */
+  // Scroll ke elemen dengan offset header
   const scrollto = (el) => {
     let header = select('#header')
     let offset = header.offsetHeight
@@ -68,9 +58,7 @@
     })
   }
 
-  /**
-   * Alihkan kelas .header-scrolled ke #header saat halaman digulir
-   */
+  // Ganti kelas .header-scrolled ke #header saat halaman digulir
   let selectHeader = select('#header')
   let selectTopbar = select('#topbar')
   if (selectHeader) {
@@ -91,9 +79,7 @@
     onscroll(document, headerScrolled)
   }
 
-  /**
-   * Tombol kembali ke atas
-   */
+  // Tombol kembali ke atas
   let backtotop = select('.kembali-ke-atas')
   if (backtotop) {
     const toggleBacktotop = () => {
@@ -107,18 +93,14 @@
     onscroll(document, toggleBacktotop)
   }
 
-  /**
-   * Sakelar navigasi mobile
-   */
+  // Sakelar navigasi mobile
   on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
 
-  /**
-   * Dropdown nav mobile aktif
-   */
+  // Dropdown nav mobile aktif
   on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
@@ -126,9 +108,7 @@
     }
   }, true)
 
-  /**
-   * Scroll dengan ofset pada link dengan nama kelas .scrollto
-   */
+  // Scroll dengan ofset pada link dengan nama kelas .scrollto
   on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
@@ -144,9 +124,7 @@
     }
   }, true)
 
-  /**
-   * Scroll dengan ofset pada pemuatan halaman dengan tautan hash di url
-   */
+  // Scroll dengan ofset pada pemuatan halaman dengan tautan hash di url
   window.addEventListener('load', () => {
     if (window.location.hash) {
       if (select(window.location.hash)) {
@@ -155,9 +133,7 @@
     }
   });
 
-  /**
-   * Preloader
-   */
+  // Preloader
   let preloader = select('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
@@ -165,23 +141,17 @@
     });
   }
 
-  /**
-   * Memulai glightbox
-   */
+  // Memulai glightbox
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
-  /**
-   * Memulai Lightbox Galeri
-   */
+  // Memulai Lightbox Galeri
   const galelryLightbox = GLightbox({
     selector: '.galelry-lightbox'
   });
 
-  /**
-   * Slider testimonial
-   */
+  // Slider testimonial
   new Swiper('.testimonials-slider', {
     speed: 600,
     loop: true,
@@ -208,9 +178,7 @@
     }
   });
 
-  /**
-   * Memulai Pure Counter
-   */
+  // Memulai Pure Counter
   new PureCounter();
 
 })()
