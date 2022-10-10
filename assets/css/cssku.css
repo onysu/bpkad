@@ -395,20 +395,6 @@ section .card {
 }
 
 /*--------------------------------------------------------------
-# Background gallery
---------------------------------------------------------------*/
-.gallery {
-  background-image: url(../../files/img/kerja.jpg);
-  background-size: cover;
-  height: 100vh;
-  background-attachment: fixed;
-}
-
-.gallery .section-title h2 {
-  color: white;
-}
-
-/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
@@ -685,7 +671,7 @@ section .card {
 --------------------------------------------------------------*/
 
 .counts {
-  background-image: url(../../files/img/wa-bg.png);
+  background-image: url(../../files/img/bg-2.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -694,6 +680,17 @@ section .card {
   background-image: url(../../files/img/wa-bg.png);
   background-size: cover;
   background-attachment: fixed;
+}
+
+.gallery {
+  background-image: url(../../files/img/kerja.jpg);
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.gallery .section-title h2 {
+  color: white;
 }
 
 /*--------------------------------------------------------------
