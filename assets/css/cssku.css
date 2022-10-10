@@ -677,7 +677,7 @@ section .card {
 }
 
 .services {
-  background-image: url(../../files/img/wa-bg.png);
+  background-image: url(../../files/img/bg-si.png);
   background-size: cover;
   background-attachment: fixed;
 }
