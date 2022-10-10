@@ -679,10 +679,16 @@ section .card {
 }
 
 /*--------------------------------------------------------------
-# counts
+# background tiap section
 --------------------------------------------------------------*/
 
 .counts {
+  background-image: url(../../files/img/wa-bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.services {
   background-image: url(../../files/img/wa-bg.png);
   background-size: cover;
   background-attachment: fixed;
