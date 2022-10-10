@@ -163,7 +163,7 @@ h1 {
 }
 
 /*--------------------------------------------------------------
-# Carousel
+# Carousel slide
 --------------------------------------------------------------*/
 .carousel-item {
   height: 100vh;
@@ -348,7 +348,7 @@ section .card {
 }
 
 /*--------------------------------------------------------------
-# galeri pagination
+# galeri halaman penomoran
 --------------------------------------------------------------*/
 .gallery .pagination {
   display: block;
@@ -365,7 +365,6 @@ section .card {
 .pagination-button {
   display: inline-block;
   padding: 5px 10px;
-  /* border: 1px solid #e0e0e0; */
   background-color: #eee;
   color: #333;
   cursor: pointer;
@@ -386,40 +385,19 @@ section .card {
   color: white;
 }
 
-/* .pagination-button:first-of-type {
-  border-radius: 18px 0 0 18px;
-} */
-
-/* .pagination-button:last-of-type {
-  border-radius: 0 18px 18px 0;
-} */
-
-/* arbitrary styles */
-/* .heading {
-  text-align: center;
-  max-width: 500px;
-  margin: 20px auto;
-} */
-
 .article-loop {
   display: block;
   width: 100%;
-  /* width: 75%; */
   padding: 0;
-  /* padding: 1em 2em; */
   margin: 0;
-  /* margin: 1em auto; */
-  /* border: 1px solid #ddd; */
-  /* background-color: #ededed; */
 }
-
 
 .contact {
   padding: 40px 0 0 0;
 }
 
 .gallery {
-  background-image: url(/files/img/kerja.jpg);
+  background-image: url(files/img/kerja.jpg);
   background-size: cover;
   height: 100vh;
   background-attachment: fixed;
@@ -436,7 +414,7 @@ section .card {
   /* color: #fff; */
   font-size: 14px;
   /* background: #222; */
-  background-image: url(/files/img/bg.png);
+  background-image: url(files/img/bg.png);
   background-size: cover;
 }
 
