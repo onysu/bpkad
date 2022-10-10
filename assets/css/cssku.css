@@ -438,10 +438,7 @@ section .card {
 }
 
 #footer .footer-top .footer-contact p {
-  /* font-size: 14px; */
-  /* line-height: 24px; */
   margin-bottom: 0;
-  /* font-family: "Raleway", sans-serif; */
   color: #000;
 }
 
@@ -491,10 +488,6 @@ section .card {
   text-decoration: none;
   color: #1977cc;
 }
-
-/* #footer .footer-newsletter {
-  font-size: 15px;
-} */
 
 #footer .footer-newsletter h4 {
   font-size: 16px;
@@ -567,7 +560,7 @@ section .card {
 }
 
 /*--------------------------------------------------------------
-# Back to top button
+# Tombol kembali ke atas
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
