@@ -640,10 +640,6 @@ section .card {
   margin-bottom: 0px;
 }
 
-.kartu .tabel {
-  padding: 15px;
-}
-
 .kartu-blog {
   margin-top: 30px;
 }
@@ -662,6 +658,24 @@ section .card {
   padding-bottom: 40px;
   max-width: 440px;
   margin: 0 auto;
+}
+
+.kartu .tabel {
+  padding: 20px 15px 15px 15px;
+  text-align: center;
+}
+
+.judul-kartu {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.judul-kartu-footer {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: .875em;
+  color: #6c757d;
 }
 
 /*--------------------------------------------------------------
