@@ -1,18 +1,18 @@
 <?php
   /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
+  * Membutuhkan library "PHP Email Form"
+  * library "PHP Email Form" hanya tersedia dalam versi pro dari template
+  * library harus diunggah ke: vendor/php-email-form/php-email-form.php
+  * Untuk info lebih lanjut dan bantuan: https://bootstrapmade.com/php-email-form/
   */
 
-  // Replace contact@example.com with your real receiving email address
+  // Ganti contact@example.com dengan alamat email penerima Anda yang sebenarnya
   $receiving_email_address = 'contact@example.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
   } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
+    die( 'Tidak dapat memuat Library "Form Email PHP"!');
   }
 
   $contact = new PHP_Email_Form;
@@ -21,14 +21,14 @@
   $contact->to = $receiving_email_address;
   $contact->from_name = $_POST['name'];
   $contact->from_email = $_POST['email'];
-  $contact->subject = 'Online Appointment Form';
+  $contact->subject = 'Form Pertemuan Online';
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
+  // Hapus komentar di bawah kode jika Anda ingin menggunakan SMTP untuk mengirim email. Anda harus memasukkan kredensial SMTP yang benar
   /*
   $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
+    'host' => 'contoh.com',
+    'username' => 'contoh',
+    'password' => 'password',
     'port' => '587'
   );
   */
@@ -42,4 +42,3 @@
   $contact->add_message( $_POST['message'], 'Message');
 
   echo $contact->send();
-?>
