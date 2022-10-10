@@ -663,3 +663,13 @@ section .card {
   max-width: 440px;
   margin: 0 auto;
 }
+
+/*--------------------------------------------------------------
+# counts
+--------------------------------------------------------------*/
+
+.counts {
+  background-image: url(../../files/img/wa-bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
