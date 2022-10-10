@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>The very first organization diagram</title>
+    <link rel="stylesheet" href="jquery-ui-1.10.2.custom.css" />
+    <script type="text/javascript" src="jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.10.2.custom.min.js"></script>
+    <script type="text/javascript" src="primitives.min.js?2020"></script>
+    <link href="primitives.latest.css?2020" media="screen" rel="stylesheet" type="text/css" />
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+      } */
+
+      #sub_content {
+        /* margin-top: 20px; */
+        /* margin-left: 20px; */
+        /* margin-right: 20px; */
+        color: #000;
+        /* float: left; */
+        /* width: 900px; */
+        /* min-height: 500px; */
+        /* font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; */
+        font-size: 8px;
+      }
+
+      #news_title {
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-size: 30px;
+        color: #000;
+      }
+
+      #news_info {
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-size: 12px;
+        color: #000;
+      }
+
+      #news_content {
+        /* font-family: Arial, Helvetica, sans-serif; */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        margin-left: 0px;
+        text-align: justify;
+      }
+
+      #basicdiagram {
+        width: 100%;
+        height: 100vh;
+        /* width: 900px;
+        height: 980px; */
+        border-style: none;
+        /* border-style: dotted; */
+        /* border-width: 1px; */
+        /* overflow: hidden; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="basicdiagram" />
+    </div>
+
+    <script type='text/javascript'>
+      $(window).load(function () {
+        var options = new primitives.orgdiagram.Config();
+
+        var items = [
+          new primitives.orgdiagram.ItemConfig({ id: 0115, parent: null, title: 'Kepala Badan Pendapatan Keuangan dan Aset Daerah', description: '', image: 'images/personal/510125330.jpg' }),
+          new primitives.orgdiagram.ItemConfig({
+            id: 1,
+            parent: 0115,
+            title: "Ted Luca ddds",
+            description: "VP, Human Resources",
+            isVisible: false,
+            image: "demo/images/photos/b.jpg"
+          }),
+          new primitives.orgdiagram.ItemConfig({
+            id: 2,
+            parent: 1,
+            title: "Ted Luca ddds",
+            description: "VP, Human Resources",
+            isVisible: false,
+            image: "demo/images/photos/b.jpg"
+          }),
+          new primitives.orgdiagram.ItemConfig({
+            id: 3,
+            parent: 2,
+            title: "Ted Luca ddds",
+            description: "VP, Human Resources",
+            isVisible: false,
+            image: "demo/images/photos/b.jpg"
+          }),
+
+          new primitives.orgdiagram.ItemConfig({ id: 011501, parent: 1, title: 'Sekretaris', description: '', image: 'images/personal/510124189.jpg' }),
+          new primitives.orgdiagram.ItemConfig({ id: 011502, parent: 3, title: 'Bidang Pendataan dan Penetapan', description: '', image: 'images/personal/510148144.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 011503, parent: 3, title: 'Bidang Penagihan, Keberatan dan Pengembangan Potensi', description: '', image: 'images/personal/510148250.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 011504, parent: 3, title: 'Bidang Anggaran', description: '', image: 'images/personal/510142253.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 011505, parent: 3, title: 'Bidang Perbendaharaan', description: '', image: 'images/personal/510142263.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 011506, parent: 3, title: 'Bidang Aset', description: '', image: 'images/personal/510142249.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 011507, parent: 3, title: 'Bidang Akuntansi', description: '', image: 'images/personal/510129000.jpg' }),
+          new primitives.orgdiagram.ItemConfig({ id: 01150101, parent: 011501, title: 'Sub Bagian Program dan Kearsipan', description: '', image: 'images/plt.png' }), new primitives.orgdiagram.ItemConfig({ id: 01150102, parent: 011501, title: 'Sub Bagian Umum, Keuangan dan Kepegawaian', description: '', image: 'images/personal/510127474.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150103, parent: 011501, title: 'Sub Bagian Keuangan dan Penatausahaan Barang', description: '', image: 'images/plt.png' }), new primitives.orgdiagram.ItemConfig({ id: 01150201, parent: 011502, title: 'Sub Bidang Pendaftaran dan Pendataan', description: '', image: 'images/plt.png' }), new primitives.orgdiagram.ItemConfig({ id: 01150202, parent: 011502, title: 'Sub Bidang Penilaian dan Penetapan', description: '', image: 'images/personal/510124025.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150203, parent: 011502, title: 'Sub Bidang Pengolahan Data dan Informasi', description: '', image: 'images/personal/010272015.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150301, parent: 011503, title: 'Sub Bidang Penagihan', description: '', image: 'images/personal/510126376.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150302, parent: 011503, title: 'Sub Bidang Penyelesaian Keberatan', description: '', image: 'images/personal/510142298.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150303, parent: 011503, title: 'Sub Bidang Pengembangan Potensi', description: '', image: 'images/plt.png' }), new primitives.orgdiagram.ItemConfig({ id: 01150401, parent: 011504, title: 'Sub Bidang Perencanaan Anggaran', description: '', image: 'images/personal/510142291.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150402, parent: 011504, title: 'Sub Bidang Pengendalian dan Evaluasi', description: '', image: 'images/personal/510160357.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150402, parent: 011504, title: 'Sub Bidang Pengendalian dan Evaluasi', description: '', image: 'images/personal/510124556.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150501, parent: 011505, title: 'Sub Bidang Verifikasi Belanja dan Pendapatan', description: '', image: 'images/personal/198209152010012016.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150502, parent: 011505, title: 'Sub Bidang Pengelolaan Kas dan Investasi', description: '', image: 'images/personal/510148204.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150601, parent: 011506, title: 'Sub Bidang Perencanaan Kebutuhan dan Pemanfaatan Barang', description: '', image: 'images/personal/198410122009011006.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150602, parent: 011506, title: 'Sub Bidang Inventarisasi Dan Penatausahaan Aset Daerah', description: '', image: 'images/personal/510148138.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150701, parent: 011507, title: 'Sub Bidang Monitoring dan Evaluasi Pelaporan Keuangan', description: '', image: 'images/personal/197702022009031004.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 01150702, parent: 011507, title: 'Sub Bidang Akuntansi dan Pelaporan Keuangan', description: '', image: 'images/personal/198506052009012005.jpg' }),
+          new primitives.orgdiagram.ItemConfig({ id: 0115100303, parent: 01151003, title: 'Arsiparis Pelaksana/Terampil', description: '', image: 'images/personal/199508172022031001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115010203, parent: 01150102, title: 'Pranata Laporan Keuangan', description: '', image: 'images/personal/199610142022032002.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115100103, parent: 01151001, title: 'Analis Keuangan Pusat dan Daerah Ahli Muda', description: '', image: 'images/personal/131743565.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115060103, parent: 01150601, title: 'Pengadministrasi Umum', description: '', image: 'images/personal/198405232010011001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115020104, parent: 01150201, title: 'Pengadministrasi Umum', description: '', image: 'images/personal/197703262009012001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115020105, parent: 01150201, title: 'Pengadministrasi Pajak', description: '', image: 'images/personal/198309092010011001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115100403, parent: 01151004, title: 'Perencana Ahli Muda', description: '', image: 'images/personal/198212162009011007.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115030303, parent: 01150303, title: 'Pengelola data dan Potensi Pajak', description: '', image: 'images/personal/198311122015011001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115060202, parent: 01150602, title: 'Pengadministrasi Sarana dan Prasarana', description: '', image: 'images/personal/196811062010011001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115030101, parent: 01150301, title: 'Pengolah Data Penagihan Pajak', description: '', image: 'images/personal/198109242015012001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115050204, parent: 01150502, title: 'Penyusun Laporan Keuangan', description: '', image: 'images/personal/198110282009012007.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115020203, parent: 01150202, title: 'Pengadministrasi Pajak', description: '', image: 'images/personal/198207052009011004.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115020201, parent: 01150202, title: 'Verifikator Pajak', description: '', image: 'images/personal/199204012015011001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115100203, parent: 01151002, title: 'Pranata Komputer Pelaksana/Terampil', description: '', image: 'images/personal/198508192019021001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115030305, parent: 01150303, title: 'Pengadministrasi Umum', description: '', image: 'images/personal/198504222010011001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115100104, parent: 01151001, title: 'Analis Keuangan Pusat dan Daerah Ahli Pertama', description: '', image: 'images/personal/199208032019021004.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115060201, parent: 01150602, title: 'Pengelola Penataan Sarana dan Prasarana', description: '', image: 'images/personal/198701082009011002.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115070101, parent: 01150701, title: 'Analis Laporan Keuangan', description: '', image: 'images/personal/198609032009012006.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115100203, parent: 01151002, title: 'Pranata Komputer Pelaksana/Terampil', description: '', image: 'images/personal/198909282019021003.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115010210, parent: 01150102, title: 'Pengelola Pemanfaatan Barang Milik Daerah', description: '', image: 'images/personal/198802162015011001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115070205, parent: 01150702, title: 'Pengolah Data Laporan Keuangan', description: '', image: 'images/personal/199207262015012001.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115100103, parent: 01151001, title: 'Analis Keuangan Pusat dan Daerah Ahli Muda', description: '', image: 'images/personal/510119430.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115100104, parent: 01151001, title: 'Analis Keuangan Pusat dan Daerah Ahli Pertama', description: '', image: 'images/personal/199002272019022003.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115040101, parent: 01150401, title: 'Analis Perencanaan Anggaran', description: '', image: 'images/personal/199401202019022006.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115070201, parent: 01150702, title: 'Analis Laporan Keuangan', description: '', image: 'images/personal/199004232019021002.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115030103, parent: 01150301, title: 'Pengadministrasi Pajak', description: '', image: 'images/personal/510160363.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115100103, parent: 01151001, title: 'Analis Keuangan Pusat dan Daerah Ahli Muda', description: '', image: 'images/personal/510121397.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115010205, parent: 01150102, title: 'Pengadministrasi Umum', description: '', image: 'images/personal/510127469.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115020203, parent: 01150202, title: 'Pengadministrasi Pajak', description: '', image: 'images/personal/510175588.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115010213, parent: 01150102, title: 'Bendahara', description: '', image: 'images/personal/510175500.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115030104, parent: 01150301, title: 'Pengadministrasi Umum', description: '', image: 'images/personal/510175578.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115010206, parent: 01150102, title: 'Pengadministrasi Perencanaan dan Program', description: '', image: 'images/personal/510203307.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115030103, parent: 01150301, title: 'Pengadministrasi Pajak', description: '', image: 'images/personal/510203344.jpg' }), new primitives.orgdiagram.ItemConfig({ id: 0115050104, parent: 01150501, title: 'Verifikator Keuangan', description: '', image: 'images/personal/199006262020121009.jpg' }),
+          new primitives.orgdiagram.ItemConfig({
+            id: 31,
+            parent: 3,
+            title: "Joao Stuger",
+            description: "Business Solutions, US",
+            isVisible: false,
+            image: "demo/images/photos/c.jpg"
+          })
+        ];
+        options.items = items;
+        options.cursorItem = 0;
+        options.hasSelectorCheckbox = primitives.common.Enabled.False;
+        jQuery("#basicdiagram").orgDiagram(options);
+      });
+    </script>
+
+  </body>
+
+</html>
