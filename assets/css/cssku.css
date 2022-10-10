@@ -399,8 +399,6 @@ video {
   }
 }
 
-
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -676,7 +674,6 @@ video {
 /*--------------------------------------------------------------
 # background tiap section
 --------------------------------------------------------------*/
-
 .hitung {
   background-color: aliceblue;
 }
@@ -684,6 +681,7 @@ video {
 .layanan {
   background-image: url(../../files/img/bg-si.png);
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
