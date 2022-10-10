@@ -1,14 +1,8 @@
-/**
-* Template Name: Medilab - v4.9.0
-* Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-(function() {
+(function () {
   "use strict";
 
   /**
-   * Easy selector helper function
+   * Fungsi pembantu pemilih yang mudah
    */
   const select = (el, all = false) => {
     el = el.trim()
@@ -20,7 +14,7 @@
   }
 
   /**
-   * Easy event listener function
+   * Fungsi event listener yang mudah
    */
   const on = (type, el, listener, all = false) => {
     let selectEl = select(el, all)
@@ -34,14 +28,14 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Mudah pada scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
 
   /**
-   * Navbar links active state on scroll
+   * Navbar link status aktif aktif pada scroll
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
@@ -61,7 +55,7 @@
   onscroll(document, navbarlinksActive)
 
   /**
-   * Scrolls to an element with header offset
+   * Scroll ke elemen dengan offset header
    */
   const scrollto = (el) => {
     let header = select('#header')
@@ -75,7 +69,7 @@
   }
 
   /**
-   * Toggle .header-scrolled class to #header when page is scrolled
+   * Alihkan kelas .header-scrolled ke #header saat halaman digulir
    */
   let selectHeader = select('#header')
   let selectTopbar = select('#topbar')
@@ -98,7 +92,7 @@
   }
 
   /**
-   * Back to top button
+   * Tombol kembali ke atas
    */
   let backtotop = select('.back-to-top')
   if (backtotop) {
@@ -114,18 +108,18 @@
   }
 
   /**
-   * Mobile nav toggle
+   * Sakelar navigasi mobile
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
 
   /**
-   * Mobile nav dropdowns activate
+   * Dropdown nav mobile aktif
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -133,9 +127,9 @@
   }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll dengan ofset pada link dengan nama kelas .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -151,7 +145,7 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll dengan ofset pada pemuatan halaman dengan tautan hash di url
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -172,21 +166,21 @@
   }
 
   /**
-   * Initiate glightbox 
+   * Memulai glightbox
    */
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
   /**
-   * Initiate Gallery Lightbox 
+   * Memulai Lightbox Galeri
    */
   const galelryLightbox = GLightbox({
     selector: '.galelry-lightbox'
   });
 
   /**
-   * Testimonials slider
+   * Slider testimonial
    */
   new Swiper('.testimonials-slider', {
     speed: 600,
@@ -215,7 +209,7 @@
   });
 
   /**
-   * Initiate Pure Counter 
+   * Memulai Pure Counter
    */
   new PureCounter();
 
