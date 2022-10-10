@@ -1784,6 +1784,7 @@
 
     <script>
       $(document).ready(function () {
+        // datatable-infoOPD-opd
         $('#opd').DataTable({
           ordering: false,
           "pageLength": 25,
@@ -1799,6 +1800,7 @@
     </script>
     <script>
       $(document).ready(function () {
+        // datatable-dokumen-download
         $('#download').DataTable({
           ordering: false,
           "pageLength": 25,
@@ -1814,6 +1816,7 @@
     </script>
     <script>
       $(document).ready(function () {
+        // datatable-dokumen-upload
         $('#upload').DataTable({
           ordering: false,
           "pageLength": 25,
@@ -1986,7 +1989,7 @@
           }
           // paginate item mulai dari halaman 1
           paginate.createPage(items, 1, perPage);
-          // tangani acara klik pada tombol
+          // tangani event klik pada tombol
           $(document).on('click', '.pagination-button', function (e) {
             // dapatkan halaman saat ini dari tombol aktif
             var currentPage = parseInt($('.pagination-button.active').text(), 10),
