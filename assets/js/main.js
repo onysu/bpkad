@@ -94,7 +94,7 @@
   /**
    * Tombol kembali ke atas
    */
-  let backtotop = select('.back-to-top')
+  let backtotop = select('.kembali-ke-atas')
   if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
