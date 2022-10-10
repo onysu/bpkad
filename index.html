@@ -1780,7 +1780,7 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
     <!-- fancybox -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
 
     <script>
       $(document).ready(function () {
@@ -1788,7 +1788,7 @@
           ordering: false,
           "pageLength": 25,
           language: {
-            url: 'https://cdn.datatables.net/plug-ins/1.12.1/i18n/id.json'
+            url: 'assets/id.json'
           },
           "columnDefs": [
             { "className": "dt-center", "targets": [0, 2] }
@@ -1803,7 +1803,7 @@
           ordering: false,
           "pageLength": 25,
           language: {
-            url: 'https://cdn.datatables.net/plug-ins/1.12.1/i18n/id.json'
+            url: 'assets/id.json'
           },
           "columnDefs": [
             { "className": "dt-center", "targets": [0, 2, 4] }
@@ -1818,7 +1818,7 @@
           ordering: false,
           "pageLength": 25,
           language: {
-            url: 'https://cdn.datatables.net/plug-ins/1.12.1/i18n/id.json'
+            url: 'assets/id.json'
           },
           "columnDefs": [
             { "className": "dt-center", "targets": [0, 2, 4] }
@@ -1833,20 +1833,16 @@
       $(window).on('load', function () {
         setInterval(clock, 1000);
       });
-
       function clock() {
         var d = new Date();
         var date = d.getDate();
         var month = d.getMonth();
         var montharr = ["Jan", "Feb", "Mar", "April", "Mei", "Juni", "Juli", "Ags", "Sep", "Okt", "Nov", "Des"];
         month = montharr[month];
-
         var year = d.getFullYear();
-
         var day = d.getDay();
         var dayarr = ["Mig", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
         day = dayarr[day];
-
         var hour = d.getHours();
         var min = d.getMinutes();
         var sec = d.getSeconds();
@@ -1854,19 +1850,15 @@
         document.getElementById("clock").innerHTML = date + " " + month + " " + year + " | " + hour + ":" + min + ":" + sec;
         //document.getElementById("time").innerHTML=hour+":"+min+":"+sec;
       }
-
       function selectLang(x) {
         var lang = x.options[x.selectedIndex].value;
         var post_id = ""
         window.location.href = "https://indonesia.go.id/index/switch_lang/" + lang + "/" + post_id;
       }
-
       // bagian menu sticky
       window.onscroll = function () { myFunction() };
-
       var navbar = document.getElementById("navbar");
       var sticky = navbar.offsetTop;
-
       function myFunction() {
         if (window.pageYOffset >= sticky) {
           navbar.classList.add("sticky")
@@ -1876,7 +1868,7 @@
       }
     </script>
 
-    <!-- // Fancybox Config -->
+    <!-- Fancybox Config -->
     <script>
       $('[data-fancybox="gallery"]').fancybox({
         buttons: [
@@ -1977,31 +1969,31 @@
             container.after(pageButtons);
           }
         };
-        // stuff it all into a jQuery method!
+        // masukkan semuanya ke dalam metode jQuery!
         $.fn.paginate = function (perPage) {
           var items = $(this);
-          // default perPage to 5
+          // default per halaman ke 5
           if (isNaN(perPage) || perPage === undefined) {
             perPage = 5;
           }
-          // don't fire if fewer items than perPage
+          // jangan bingung jika lebih sedikit item daripada per halaman
           if (items.length <= perPage) {
             return true;
           }
-          // ensure items stay in the same DOM position
+          // memastikan item tetap berada di posisi DOM yang sama
           if (items.length !== items.parent()[0].children.length) {
             items.wrapAll('<div class="pagination-items" />');
           }
-          // paginate the items starting at page 1
+          // paginate item mulai dari halaman 1
           paginate.createPage(items, 1, perPage);
-          // handle click events on the buttons
+          // tangani acara klik pada tombol
           $(document).on('click', '.pagination-button', function (e) {
-            // get current page from active button
+            // dapatkan halaman saat ini dari tombol aktif
             var currentPage = parseInt($('.pagination-button.active').text(), 10),
               newPage = currentPage,
               totalPages = paginate.totalPages(items, perPage),
               target = $(e.target);
-            // get numbered page
+            // dapatkan halaman bernomor
             newPage = parseInt(target.text(), 10);
             if (target.text() == '«') newPage = 1;
             if (target.text() == '»') newPage = totalPages;
