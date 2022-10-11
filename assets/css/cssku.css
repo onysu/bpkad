@@ -161,7 +161,8 @@ h1 {
 # Hero
 --------------------------------------------------------------*/
 #hero .container {
-  padding-top: 110px;
+  padding-top: 220px;
+  /* padding-top: 110px; */
 }
 
 #hero {
