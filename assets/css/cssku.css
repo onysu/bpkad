@@ -716,6 +716,14 @@ video {
 }
 
 /*--------------------------------------------------------------
+# Struktur
+--------------------------------------------------------------*/
+/* .struktur .section-title {
+  text-align: center;
+  padding-bottom: 10px;
+} */
+
+/*--------------------------------------------------------------
 # Custom Scrollbar
 --------------------------------------------------------------*/
 /* width */
@@ -1101,6 +1109,11 @@ video {
   color: #848484;
 }
 
+/* .info-opd .section-title {
+  text-align: center;
+  padding-bottom: 10px;
+} */
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -1116,7 +1129,7 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .section-title h2 {
@@ -1134,11 +1147,12 @@ section {
   content: "";
   position: absolute;
   display: block;
-  width: 120px;
+  width: 100%;
+  /* width: 120px; */
   height: 1px;
   background: #ddd;
   bottom: 1px;
-  left: calc(50% - 60px);
+  /* left: calc(50% - 60px); */
 }
 
 .section-title h2::after {
@@ -1147,7 +1161,8 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #1977cc;
+  background: green;
+  /* background: #1977cc; */
   bottom: 0;
   left: calc(50% - 20px);
 }
