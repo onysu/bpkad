@@ -161,7 +161,8 @@ h1 {
 # Hero
 --------------------------------------------------------------*/
 #hero .container {
-  padding-top: 110px;
+  padding-top: 220px;
+  /* padding-top: 110px; */
 }
 
 #hero {
@@ -459,6 +460,7 @@ video {
   color: #000;
   position: relative;
   padding-bottom: 12px;
+  padding-left: 30px;
 }
 
 #footer .footer-top .footer-links {
@@ -467,8 +469,8 @@ video {
 
 #footer .footer-top .footer-links ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  /* padding: 0; */
+  /* margin: 0; */
 }
 
 #footer .footer-top .footer-links ul i {
