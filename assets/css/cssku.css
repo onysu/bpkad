@@ -731,6 +731,7 @@ video {
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
+  background: #000;
 }
 
 /* Track */
@@ -741,13 +742,13 @@ video {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #999;
   border-radius: 8px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: red;
 }
 
 /*--------------------------------------------------------------
