@@ -695,7 +695,10 @@ video {
 # background tiap section
 --------------------------------------------------------------*/
 .hitung {
-  background-color: aliceblue;
+  background-image: url(../../files/img/wa-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .layanan {
@@ -712,9 +715,9 @@ video {
   background-attachment: fixed;
 }
 
-.struktur {
+/* .struktur {
   background-color: aliceblue;
-}
+} */
 
 /*--------------------------------------------------------------
 # Struktur
@@ -754,7 +757,6 @@ video {
 # Counts Count Box
 --------------------------------------------------------------*/
 .hitung {
-  background: #f1f7fd;
   padding: 70px 0 60px;
 }
 
