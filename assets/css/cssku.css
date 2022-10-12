@@ -237,6 +237,10 @@ h1 {
   align-items: center;
 }
 
+#hero .btn-watch-video i:hover {
+  color: greenyellow;
+}
+
 #hero .btn-watch-video i {
   color: green;
   font-size: 32px;
