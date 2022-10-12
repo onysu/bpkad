@@ -774,7 +774,7 @@ video {
   left: 50%;
   transform: translateX(-50%);
   font-size: 20px;
-  background: aliceblue;
+  background: white;
   /* color: #fff; */
   border-radius: 50px;
   display: inline-flex;
