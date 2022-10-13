@@ -567,6 +567,7 @@ video {
   width: 35px;
   height: 35px;
   transition: 0.3s;
+  box-shadow: 0px 10px 10px 0px var(--bs-body-color)
 }
 
 #footer .social-links a:hover {
@@ -590,6 +591,7 @@ video {
   height: 40px;
   border-radius: 50%;
   transition: all 0.4s;
+  box-shadow: 0px 10px 10px 0px var(--bs-body-color)
 }
 
 .kembali-ke-atas i {
