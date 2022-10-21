@@ -2,7 +2,7 @@
 <nav class="main-header navbar navbar-expand-md navbar-dark navbar-red">
   <div class="container">
     <a href="index.php" class="navbar-brand">
-      <img src="../files/img/logobpkad.png" alt="Logo" class="brand-image">
+      <img src="../../files/img/logobpkad.png" alt="Logo" class="brand-image">
     </a>
 
     <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
