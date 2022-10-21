@@ -61,12 +61,10 @@ $data_info = select("SELECT * FROM infoopd");
                 </div>
 
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  Tambah Dokumen
-                </button>
+                <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#tambahDokumen">Tambah Dokumen</button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="ModalLayanan" aria-hidden="true">
+                <div class="modal fade" id="tambahDokumen" tabindex="-1" aria-labelledby="ModalLayanan" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -77,20 +75,20 @@ $data_info = select("SELECT * FROM infoopd");
                         <input type="hidden" class="form-control" name="id_info">
                         <div class="modal-body">
                           <div class="mb-3">
-                            <label for="nama" class="form-label">Nama Aplikasi</label>
-                            <input type="text" class="form-control" name="nama" placeholder="nama aplikasi">
+                            <label for="keterangan" class="form-label">Keterangan</label>
+                            <input type="text" class="form-control" name="keterangan" placeholder="keterangan dokumen">
                           </div>
                           <div class="mb-3">
-                            <label for="subnama" class="form-label">Sub Nama Aplikasi</label>
-                            <input type="text" class="form-control" name="subnama" placeholder="subnama aplikasi">
+                            <label for="file" class="form-label">Jenis File</label>
+                            <input type="text" class="form-control" name="file" placeholder="jenis file">
                           </div>
                           <div class="mb-3">
-                            <label for="link" class="form-label">Link Aplikasi</label>
-                            <input type="text" class="form-control" name="link" placeholder="link aplikasi">
+                            <label for="dokumen" class="form-label">Dokumen</label>
+                            <input type="file" class="form-control" name="dokumen" placeholder="file dokumen">
                           </div>
                           <div class="mb-3">
-                            <label for="gambar" class="form-label">Pilih Gambar</label>
-                            <input class="form-control form-control-sm" name="gambar" type="file">
+                            <label for="tanggal" class="form-label">Tanggal Upload</label>
+                            <input class="form-control form-control-sm" name="tgl_upload" type="date">
                           </div>
                         </div>
                         <div class="modal-footer">
@@ -124,8 +122,8 @@ $data_info = select("SELECT * FROM infoopd");
                           <td><a href="<?= $infoopd['dokumen']; ?>" target="_blank">Perjanjian Kinerja 2021</a></td>
                           <td><?= date('d/m/Y H:i:s', strtotime($infoopd['tgl_upload'])); ?></td>
                           <td>
-                            <a href="#" class="btn btn-success">Edit</a>
-                            <a href="#" class="btn btn-danger">Hapus</a>
+                            <a href="#" class="btn btn-success btn-sm">Edit</a>
+                            <a href="#" class="btn btn-danger btn-sm">Hapus</a>
                           </td>
                         </tr>
                       <?php endforeach; ?>
