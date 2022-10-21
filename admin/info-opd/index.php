@@ -128,7 +128,7 @@ $data_info = select("SELECT * FROM infoopd");
                           <td><?= date('d/m/Y H:i:s', strtotime($infoopd['tgl_upload'])); ?></td>
                           <td>
                             <a href="#" class="btn btn-success btn-sm">Edit</a>
-                            <a href="hapus.php?id_info=<?= $infoopd['id_info']; ?>" class="btn btn-danger btn-sm">Hapus</a>
+                            <a href="hapus.php?id_info=<?= $infoopd['id_info']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah data ini akan di hapus?');">Hapus</a>
                           </td>
                         </tr>
                       <?php endforeach; ?>
