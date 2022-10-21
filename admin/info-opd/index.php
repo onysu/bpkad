@@ -74,6 +74,7 @@ $data_info = select("SELECT * FROM infoopd");
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" class="form-control" name="id_info">
                         <div class="modal-body">
                           <div class="mb-3">
                             <label for="nama" class="form-label">Nama Aplikasi</label>
@@ -121,7 +122,7 @@ $data_info = select("SELECT * FROM infoopd");
                           <td><?= $infoopd['keterangan']; ?></td>
                           <td><?= $infoopd['file']; ?></td>
                           <td><a href="<?= $infoopd['dokumen']; ?>" target="_blank">Perjanjian Kinerja 2021</a></td>
-                          <td><?= $infoopd['tgl_upload']; ?></td>
+                          <td><?= date('d/m/Y H:i:s', strtotime($infoopd['tgl_upload'])); ?></td>
                           <td>
                             <a href="#" class="btn btn-success">Edit</a>
                             <a href="#" class="btn btn-danger">Hapus</a>
