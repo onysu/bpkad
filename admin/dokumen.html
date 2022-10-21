@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="id">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Top Navigation + Sidebar</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="dist/css/cssku.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <style>
+      .xxx {
+        background-color: #eee;
+        background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
+        border-radius: 3px;
+        border: 1px solid #d5d5d5;
+        color: #333;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-size: inherit;
+        /* font-size: .5rem; */
+        /* font-weight: bold; */
+        padding: 4px 6px 4px 6px;
+        text-decoration: none;
+        text-shadow: 0 1px 0 #fff;
+      }
+    </style>
+  </head>
+
+  <body class="hold-transition layout-top-nav layout-navbar-fixed">
+    <div class="wrapper">
+
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand-md navbar-dark navbar-red">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">
+            <img src="files/img/logobpkad.png" alt="AdminLTE Logo" class="brand-image">
+          </a>
+
+          <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Link navbar kiri -->
+          <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">BERANDA</a>
+              </li>
+              <li class="nav-item">
+                <a href="profil.html" class="nav-link">PROFIL</a>
+              </li>
+              <li class="nav-item">
+                <a href="struktur.html" class="nav-link">STRUKTUR</a>
+              </li>
+              <li class="nav-item">
+                <a href="info-opd.html" class="nav-link">INFO OPD</a>
+              </li>
+              <li class="nav-item">
+                <a href="layanan.html" class="nav-link">LAYANAN</a>
+              </li>
+              <li class="nav-item">
+                <a href="dokumen.html" class="nav-link">DOKUMEN</a>
+              </li>
+              <li class="nav-item">
+                <a href="galeri.html" class="nav-link">GALERI</a>
+              </li>
+              <li class="nav-item">
+                <a href="kontak.html" class="nav-link">KONTAK</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Link navbar kanan -->
+          <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                <i class="fas fa-th-large"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- /.navbar -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <div class="container">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Informasi OPD</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+                  <li class="breadcrumb-item active">InfoOPD</li>
+                </ol>
+              </div>
+            </div>
+          </div><!-- /.container -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Daftar Download File BPKAD</h3>
+                    <!-- <a class=xxx href="#"><i class="fab fa-github"></i> Github</a>
+                    <a class=xxx href="#"><i class="fas fa-cloud-download-alt"></i> Download</a> -->
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <nav>
+                      <div class="nav nav-tabs mb-4" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-home-tab" data-toggle="tab" data-target="#nav-home"
+                          type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i
+                            class="fas fa-download px-1"></i> DOWNLOAD</button>
+                        <button class="nav-link" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile"
+                          type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i
+                            class="fas fa-upload px-1"></i> UPLOAD</button>
+                      </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                        aria-labelledby="nav-home-tab">
+                        <button class="btn btn-default btn-flat mb-3"><i class="fas fa-plus"></i> Tambah
+                          Dokumen Download</button>
+                        <table id="data-download" class="table table-bordered table-sm">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>No.</th>
+                              <th>Keterangan</th>
+                              <th>File</th>
+                              <th>Dokumen</th>
+                              <th>Tanggal Upload</th>
+                              <th>Menu</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Perjanjian Kinerja</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Perjanjian Kinerja 2021</td>
+                              <td>1 November 2021</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Perjanjian Kinerja 2022</td>
+                              <td>5 Januari 2022</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Laporan Kinerja Instansi Pemerintah (LKJIP)</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Laporan Kinerja Instansi Pemerintah 2020</td>
+                              <td>4 Januari 2021</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Laporan Kinerja Instansi Pemerintah 2021</td>
+                              <td>1 Februari 2022</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Rencana Strategi (RENSTRA)</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Strategi (RENSTRA) 2016-2021</td>
+                              <td>31 Desember 2018</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Strategi (RENSTRA) 2021-2026</td>
+                              <td>27 September 2021</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>Indikator Kinerja Utama (IKU BPKAD)</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Indikator Kinerja Utama</td>
+                              <td>3 Januari 2022</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>Rencana Aksi (RENAKSI)</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Aksi (RENAKSI) 2021</td>
+                              <td>4 Januari 2021</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Aksi (RENAKSI) 2022</td>
+                              <td>3 Januari 2022</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td>Rencana Kerja (RENJA)</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Kerja (RENJA) 2021</td>
+                              <td>27 Juli 2020</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Kerja (RENJA) 2022</td>
+                              <td> 23 Juli 2021</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>7</td>
+                              <td>Firefox 1.0</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.7</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>8</td>
+                              <td>Firefox 1.5</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.8</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>9</td>
+                              <td>Firefox 2.0</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.8</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>10</td>
+                              <td>Firefox 3.0</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.9</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>11</td>
+                              <td>Camino 1.0</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.8</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>12</td>
+                              <td>Camino 1.5</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.8</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>13</td>
+                              <td>Netscape 7.2</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.7</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>14</td>
+                              <td>Netscape Browser 8</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.7</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>15</td>
+                              <td>Netscape Navigator 9</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.8</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                          <!-- <tfoot>
+                        <tr>
+                          <th>Rendering engine</th>
+                          <th>Browser</th>
+                          <th>Platform(s)</th>
+                          <th>Engine version</th>
+                          <th>CSS grade</th>
+                          <td></td>
+                        </tr>
+                      </tfoot> -->
+                        </table>
+                      </div>
+                      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <button class="btn btn-default btn-flat mb-3"><i class="fas fa-plus"></i> Tambah
+                          Data Upload</button>
+                        <table id="data-upload" class="table table-bordered table-sm">
+                          <thead class="bg-light">
+                            <tr>
+                              <th>No.</th>
+                              <th>Keterangan</th>
+                              <th>File</th>
+                              <th>Dokumen</th>
+                              <th>Tanggal Upload</th>
+                              <th>Menu</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td>Perjanjian Kinerja</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Perjanjian Kinerja 2021</td>
+                              <td>1 November 2021</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Perjanjian Kinerja 2022</td>
+                              <td>5 Januari 2022</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>Laporan Kinerja Instansi Pemerintah (LKJIP)</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Laporan Kinerja Instansi Pemerintah 2020</td>
+                              <td>4 Januari 2021</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Laporan Kinerja Instansi Pemerintah 2021</td>
+                              <td>1 Februari 2022</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>Rencana Strategi (RENSTRA)</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Strategi (RENSTRA) 2016-2021</td>
+                              <td>31 Desember 2018</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Strategi (RENSTRA) 2021-2026</td>
+                              <td>27 September 2021</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>Indikator Kinerja Utama (IKU BPKAD)</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Indikator Kinerja Utama</td>
+                              <td>3 Januari 2022</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>Rencana Aksi (RENAKSI)</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Aksi (RENAKSI) 2021</td>
+                              <td>4 Januari 2021</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Aksi (RENAKSI) 2022</td>
+                              <td>3 Januari 2022</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td>Rencana Kerja (RENJA)</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Kerja (RENJA) 2021</td>
+                              <td>27 Juli 2020</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>Rencana Kerja (RENJA) 2022</td>
+                              <td> 23 Juli 2021</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>7</td>
+                              <td>Firefox 1.0</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.7</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>8</td>
+                              <td>Firefox 1.5</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.8</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>9</td>
+                              <td>Firefox 2.0</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.8</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>10</td>
+                              <td>Firefox 3.0</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.9</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>11</td>
+                              <td>Camino 1.0</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.8</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>12</td>
+                              <td>Camino 1.5</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.8</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>13</td>
+                              <td>Netscape 7.2</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.7</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>14</td>
+                              <td>Netscape Browser 8</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.7</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>15</td>
+                              <td>Netscape Navigator 9</td>
+                              <td><i class="fas fa-file-pdf"></i></td>
+                              <td>1.8</td>
+                              <td>A</td>
+                              <td>
+                                <div class="btn-group">
+                                  <button type="button" class="btn btn-default"><i class="fas fa-edit"></i></button>
+                                  <button type="button" class="btn btn-default"><i
+                                      class="fas fa-trash-alt"></i></button>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                          <!-- <tfoot>
+                        <tr>
+                          <th>Rendering engine</th>
+                          <th>Browser</th>
+                          <th>Platform(s)</th>
+                          <th>Engine version</th>
+                          <th>CSS grade</th>
+                          <td></td>
+                        </tr>
+                      </tfoot> -->
+                        </table>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <div class="container">
+          <!-- To the right -->
+          <div class="float-right d-none d-sm-inline">
+            WebDev by <a href="mailto:onydarrell@gmail.com">@ony</a>
+          </div>
+          <!-- Default to the left -->
+          Website &copy; 2022 <a href="https://bpkad.blitarkota.go.id/bpkadkotablitar/">BPKAD</a>.
+        </div>
+      </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="plugins/jszip/jszip.min.js"></script>
+    <script src="plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Page specific script -->
+    <script>
+      $(function () {
+        $("#data-download").DataTable({
+          language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.12.1/i18n/id.json',
+          },
+          "responsive": true, "lengthChange": false, "autoWidth": false, "ordering": false, "lengthChange": true,
+          // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $("#data-upload").DataTable({
+          language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.12.1/i18n/id.json',
+          },
+          "responsive": true, "lengthChange": false, "autoWidth": false, "ordering": false, "lengthChange": true,
+          // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        // $('#example2').DataTable({
+        //   "paging": true,
+        //   "lengthChange": false,
+        //   "searching": false,
+        //   "ordering": true,
+        //   "info": true,
+        //   "autoWidth": false,
+        //   "responsive": true,
+        // });
+      });
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Top Navigation + Sidebar</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="dist/css/cssku.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://editor.datatables.net/extensions/Editor/css/editor.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.1.2/css/dataTables.dateTime.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+
+  <body class="hold-transition layout-top-nav layout-navbar-fixed">
+    <div class="wrapper">
+
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">
+            <img src="files/img/logobpkad.png" alt="AdminLTE Logo" class="brand-image">
+          </a>
+
+          <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Link navbar kiri -->
+          <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">BERANDA</a>
+              </li>
+              <li class="nav-item">
+                <a href="profil.html" class="nav-link">PROFIL</a>
+              </li>
+              <li class="nav-item">
+                <a href="struktur.html" class="nav-link">STRUKTUR</a>
+              </li>
+              <li class="nav-item">
+                <a href="info-opd.html" class="nav-link">INFO OPD</a>
+              </li>
+              <li class="nav-item">
+                <a href="layanan.html" class="nav-link">LAYANAN</a>
+              </li>
+              <li class="nav-item">
+                <a href="dokumen.html" class="nav-link">DOKUMEN</a>
+              </li>
+              <li class="nav-item">
+                <a href="galeri.html" class="nav-link">GALERI</a>
+              </li>
+              <li class="nav-item">
+                <a href="kontak.html" class="nav-link">KONTAK</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Link navbar kanan -->
+          <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                <i class="fas fa-th-large"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- /.navbar -->
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <div class="container">
+
+          </div><!-- /.container -->
+        </section>
+
+        <!-- Main content -->
+        <div class="content">
+          <div class="container">
+            <div class="row">
+              <div class="card">
+                <div class="clearfix p-3">
+                  <p class="float-start">kiri</p>
+                  <p class="float-end">kanan</p>
+                </div>
+                <div class="card-body">
+
+                  <div class="d-flex flex-wrap gap-3">
+                    <div class="media">
+                      <img src="files/img/aplikasi/sipkd.jpg" class="mr-3 img-thumbnail" alt="...">
+                      <!-- <div class="media-body">
+                      <h5 class="mt-0">Media heading</h5>
+                      <p>Will you do the same for me?</p>
+                    </div> -->
+                    </div>
+                    <div class="media">
+                      <img src="files/img/aplikasi/sipkd.jpg" class="mr-3 img-thumbnail" alt="...">
+                      <!-- <div class="media-body">
+                      <h5 class="mt-0">Media heading</h5>
+                      <p>Will you do the same for me?</p>
+                    </div> -->
+                    </div>
+                    <div class="media">
+                      <img src="files/img/aplikasi/sipkd.jpg" class="mr-3 img-thumbnail" alt="...">
+                      <!-- <div class="media-body">
+                      <h5 class="mt-0">Media heading</h5>
+                      <p>Will you do the same for me?</p>
+                    </div> -->
+                    </div>
+                    <div class="media">
+                      <img src="files/img/aplikasi/sipkd.jpg" class="mr-3 img-thumbnail" alt="...">
+                      <!-- <div class="media-body">
+                      <h5 class="mt-0">Media heading</h5>
+                      <p>Will you do the same for me?</p>
+                    </div> -->
+                    </div>
+                    <div class="media">
+                      <img src="files/img/aplikasi/sipkd.jpg" class="mr-3 img-thumbnail" alt="...">
+                      <!-- <div class="media-body">
+                      <h5 class="mt-0">Media heading</h5>
+                      <p>Will you do the same for me?</p>
+                    </div> -->
+                    </div>
+                    <div class="media">
+                      <img src="files/img/aplikasi/sipkd.jpg" class="mr-3 img-thumbnail" alt="...">
+                      <!-- <div class="media-body">
+                      <h5 class="mt-0">Media heading</h5>
+                      <p>Will you do the same for me?</p>
+                    </div> -->
+                    </div>
+                    <div class="media">
+                      <img src="files/img/aplikasi/sipkd.jpg" class="mr-3 img-thumbnail" alt="...">
+                      <!-- <div class="media-body">
+                      <h5 class="mt-0">Media heading</h5>
+                      <p>Will you do the same for me?</p>
+                    </div> -->
+                    </div>
+                    <div class="media">
+                      <img src="files/img/aplikasi/sipkd.jpg" class="mr-3 img-thumbnail" alt="...">
+                      <!-- <div class="media-body">
+                      <h5 class="mt-0">Media heading</h5>
+                      <p>Will you do the same for me?</p>
+                    </div> -->
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div><!-- /.container -->
+        </div>
+        <!-- /.content -->
+
+      </div>
+      <!-- /.content-wrapper -->
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <!-- To the right -->
+        <div class="float-right d-none d-sm-inline">
+          WebDev by <a href="mailto:onydarrell@gmail.com">@ony</a>
+        </div>
+        <!-- Default to the left -->
+        Website &copy; 2022 <a href="https://bpkad.blitarkota.go.id/bpkadkotablitar/">BPKAD</a>.
+      </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://editor.datatables.net/extensions/Editor/js/dataTables.editor.min.js"></script>
+    <script src="https://cdn.datatables.net/datetime/1.1.2/js/dataTables.dateTime.min.js"></script>
+
+    <script>
+      var editor; // use a global for the submit and return data rendering in the examples
+
+      // Template function to display the information panels. Editor will
+      // automatically keep the values up-to-date with any changes due to the use of
+      // the `data-editor-field` attribute. It knows which panel to update for each
+      // record through the use of `data-editor-id` in the container element.
+      function createPanel(data) {
+        var id = data.DT_RowId;
+
+        $(
+          '<div class="panel" data-editor-id="' + id + '">' +
+          '<i class="edit fa fa-pencil" data-id="' + id + '"></i>' +
+          '<i class="remove fa fa-times" data-id="' + id + '"></i>' +
+          '<dl>' +
+          '<dt>Name:</dt>' +
+          '<dd>' +
+          '<span data-editor-field="first_name">' + data.first_name + '</span> ' +
+          '<span data-editor-field="last_name">' + data.last_name + '</span>' +
+          '</dd>' +
+          '<dt>Position:</dt>' +
+          '<dd data-editor-field="position">' + data.position + '</dd>' +
+          '<dt>Office:</dt>' +
+          '<dd data-editor-field="office">' + data.office + '</dd>' +
+          '</dl>' +
+          '</div>'
+        ).appendTo('#panels');
+      }
+
+      $(document).ready(function () {
+        editor = new $.fn.dataTable.Editor({
+          ajax: "../php/staff.php",
+          fields: [{
+            label: "First name:",
+            name: "first_name"
+          }, {
+            label: "Last name:",
+            name: "last_name"
+          }, {
+            label: "Position:",
+            name: "position"
+          }, {
+            label: "Office:",
+            name: "office"
+          }
+          ]
+        });
+
+        // Create record - on create we insert a new panel
+        editor.on('postCreate', function (e, json) {
+          createPanel(json.data[0]);
+        });
+
+        $('button.create').on('click', function () {
+          editor
+            .title('Create new record')
+            .buttons('Create')
+            .create();
+        });
+
+        // Edit
+        $('#panels').on('click', 'i.edit', function () {
+          editor
+            .title('Edit record')
+            .buttons('Save changes')
+            .edit($(this).data('id'));
+        });
+
+        // Remove
+        $('#panels').on('click', 'i.remove', function () {
+          editor
+            .title('Delete record')
+            .buttons('Delete')
+            .message('Are you sure you wish to delete this record?')
+            .remove($(this).data('id'));
+        });
+
+        // Load the initial data and display in panels
+        $.ajax({
+          url: '../php/staff.php',
+          dataType: 'json',
+          success: function (json) {
+            for (var i = 0, ien = json.data.length; i < ien; i++) {
+              createPanel(json.data[i]);
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+
+</html>
