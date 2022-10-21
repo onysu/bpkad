@@ -80,7 +80,12 @@ $data_info = select("SELECT * FROM infoopd");
                           </div>
                           <div class="mb-3">
                             <label for="file" class="form-label">Jenis File</label>
-                            <input type="text" class="form-control" name="file" placeholder="jenis file">
+                            <select name="file" id="file" class="form-control" required>
+                              <option value="">-- jenis file --</option>
+                              <option value=".pdf">.pdf</option>
+                              <option value=".zip">.zip</option>
+                              <option value=".rar">.rar</option>
+                            </select>
                           </div>
                           <div class="mb-3">
                             <label for="dokumen" class="form-label">Dokumen</label>
@@ -119,7 +124,7 @@ $data_info = select("SELECT * FROM infoopd");
                           <th scope="row"><?= $no++ ?></th>
                           <td><?= $infoopd['keterangan']; ?></td>
                           <td><?= $infoopd['file']; ?></td>
-                          <td><a href="<?= $infoopd['dokumen']; ?>" target="_blank">Perjanjian Kinerja 2021</a></td>
+                          <td><a href="<?= $infoopd['dokumen']; ?>" target="_blank"><?= $infoopd['dokumen']; ?></a></td>
                           <td><?= date('d/m/Y H:i:s', strtotime($infoopd['tgl_upload'])); ?></td>
                           <td>
                             <a href="#" class="btn btn-success btn-sm">Edit</a>
