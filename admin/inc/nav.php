@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand-md navbar-dark navbar-red">
   <div class="container">
-    <a href="index.html" class="navbar-brand">
+    <a href="index.php" class="navbar-brand">
       <img src="../files/img/logobpkad.png" alt="Logo" class="brand-image">
     </a>
 
@@ -13,28 +13,28 @@
     <div class="collapse navbar-collapse order-3" id="navbarCollapse">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="index.html" class="nav-link">BERANDA</a>
+          <a href="index.php" class="nav-link">BERANDA</a>
         </li>
         <li class="nav-item">
-          <a href="profil.html" class="nav-link">PROFIL</a>
+          <a href="profil.php" class="nav-link">PROFIL</a>
         </li>
         <li class="nav-item">
-          <a href="struktur.html" class="nav-link">STRUKTUR</a>
+          <a href="struktur.php" class="nav-link">STRUKTUR</a>
         </li>
         <li class="nav-item">
-          <a href="info-opd.html" class="nav-link">INFO OPD</a>
+          <a href="info-opd.php" class="nav-link">INFO OPD</a>
         </li>
         <li class="nav-item">
-          <a href="layanan.html" class="nav-link">LAYANAN</a>
+          <a href="layanan.php" class="nav-link">LAYANAN</a>
         </li>
         <li class="nav-item">
-          <a href="dokumen.html" class="nav-link">DOKUMEN</a>
+          <a href="dokumen.php" class="nav-link">DOKUMEN</a>
         </li>
         <li class="nav-item">
-          <a href="galeri.html" class="nav-link">GALERI</a>
+          <a href="galeri.php" class="nav-link">GALERI</a>
         </li>
         <li class="nav-item">
-          <a href="kontak.html" class="nav-link">KONTAK</a>
+          <a href="kontak.php" class="nav-link">KONTAK</a>
         </li>
       </ul>
     </div>
