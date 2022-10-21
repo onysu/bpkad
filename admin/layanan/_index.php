@@ -104,14 +104,14 @@
 
     <?php
     include 'koneksi.php';
-    $data = mysqli_query($koneksi, "SELECT * FROM siswa ORDER BY id_siswa DESC");
+    $data = mysqli_query($koneksi, "SELECT * FROM layanan ORDER BY id DESC");
     while ($row = mysqli_fetch_array($data)) {
     ?>
       <div class="col-md-6 my-3 p-3 bg-body rounded shadow-sm">
         <div class="d-flex text-muted">
           <img src="file/<?= $row['foto_siswa']; ?>" class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="13%" height="13%" alt="...">
           <div class="mb-0 small lh-sm w-100">
-            <strong class="text-gray-dark"><?= $row['nm_siswa']; ?></strong>
+            <strong class="text-gray-dark"><?= $row['nama']; ?></strong>
             <span class="d-block"><a href="#">Link App</a></span>
             <div class="d-flex mt-3">
               <div class="btn-group" role="group" aria-label="Basic example">

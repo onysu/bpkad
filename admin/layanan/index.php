@@ -41,92 +41,62 @@
                   <!-- <a class=xxx href="#"><i class="fab fa-github"></i> Github</a>
                     <a class=xxx href="#"><i class="fas fa-cloud-download-alt"></i> Download</a> -->
                 </div>
-                <div class="card-body p-0">
 
-                  <div class="p-3 bg-white rounded shadow-sm">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Tambah Aplikasi
+                </button>
 
-                    <div class="media text-muted">
-                      <img src="../../files/img/aplikasi/sipkd.jpg" alt="" class="bd-placeholder-img mr-2 rounded">
-                      <div class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
-                        <!-- <div class="d-flex justify-content-between align-items-center w-100"> -->
-                        <strong class="text-gray-dark">Sistem Informasi Pengelolaan Keuangan Daerah</strong>
-                        <!-- <a href="#">Follow</a> -->
-                        <!-- </div> -->
-                        <span class="d-block">Integrated - Online - Realtime</span>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Aplikasi</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
+                      <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <div class="modal-body">
+                          <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Nama Aplikasi</label>
+                            <input type="text" class="form-control" name="nm_siswa" id="exampleFormControlInput1" placeholder="nama aplikasi">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formFileSm" class="form-label">Pilih foto</label>
+                            <input class="form-control form-control-sm" name="foto_siswa" id="formFileSm" type="file">
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Batal</button>
+                          <button type="submit" class="btn btn-outline-secondary btn-sm">Simpan</button>
+                        </div>
+                      </form>
                     </div>
-                    <div class="media text-muted pt-3">
-                      <img src="../../files/img/aplikasi/sipkd.jpg" alt="" class="bd-placeholder-img mr-2 rounded">
-                      <div class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
-                        <!-- <div class="d-flex justify-content-between align-items-center w-100"> -->
-                        <strong class="text-gray-dark">Sistem Informasi Manajemen Barang Daerah</strong>
-                        <!-- <a href="#">Follow</a> -->
-                        <!-- </div> -->
-                        <span class="d-block">Integrated - Online - Realtime</span>
-                      </div>
-                    </div>
-                    <div class="media text-muted pt-3">
-                      <img src="../../files/img/aplikasi/sipkd.jpg" alt="" class="bd-placeholder-img mr-2 rounded">
-                      <div class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
-                        <!-- <div class="d-flex justify-content-between align-items-center w-100"> -->
-                        <strong class="text-gray-dark">Sistem Informasi Kendaraan Dinas Kota Blitar</strong>
-                        <!-- <a href="#">Follow</a> -->
-                        <!-- </div> -->
-                        <span class="d-block">Integrated - Online - Realtime</span>
-                      </div>
-                    </div>
-                    <div class="media text-muted pt-3">
-                      <img src="../../files/img/aplikasi/sipkd.jpg" alt="" class="bd-placeholder-img mr-2 rounded">
-                      <div class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
-                        <!-- <div class="d-flex justify-content-between align-items-center w-100"> -->
-                        <strong class="text-gray-dark">Sistem Informasi Pengelolaan Keuangan Daerah</strong>
-                        <!-- <a href="#">Follow</a> -->
-                        <!-- </div> -->
-                        <span class="d-block">Integrated - Online - Realtime</span>
-                      </div>
-                    </div>
-                    <div class="media text-muted pt-3">
-                      <img src="../../files/img/aplikasi/sipkd.jpg" alt="" class="bd-placeholder-img mr-2 rounded">
-                      <div class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
-                        <!-- <div class="d-flex justify-content-between align-items-center w-100"> -->
-                        <strong class="text-gray-dark">Sistem Informasi Manajemen Barang Daerah</strong>
-                        <!-- <a href="#">Follow</a> -->
-                        <!-- </div> -->
-                        <span class="d-block">Integrated - Online - Realtime</span>
-                      </div>
-                    </div>
-                    <div class="media text-muted pt-3">
-                      <img src="../../files/img/aplikasi/sipkd.jpg" alt="" class="bd-placeholder-img mr-2 rounded">
-                      <div class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
-                        <!-- <div class="d-flex justify-content-between align-items-center w-100"> -->
-                        <strong class="text-gray-dark">Sistem Informasi Kendaraan Dinas Kota Blitar</strong>
-                        <!-- <a href="#">Follow</a> -->
-                        <!-- </div> -->
-                        <span class="d-block">Integrated - Online - Realtime</span>
-                      </div>
-                    </div>
-                    <div class="media text-muted pt-3">
-                      <img src="../../files/img/aplikasi/sipkd.jpg" alt="" class="bd-placeholder-img mr-2 rounded">
-                      <div class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
-                        <!-- <div class="d-flex justify-content-between align-items-center w-100"> -->
-                        <strong class="text-gray-dark">Sistem Informasi Manajemen Barang Daerah</strong>
-                        <!-- <a href="#">Follow</a> -->
-                        <!-- </div> -->
-                        <span class="d-block">Integrated - Online - Realtime</span>
-                      </div>
-                    </div>
-                    <div class="media text-muted pt-3">
-                      <img src="../../files/img/aplikasi/sipkd.jpg" alt="" class="bd-placeholder-img mr-2 rounded">
-                      <div class="media-body pb-3 mb-0 lh-125 border-bottom border-gray">
-                        <!-- <div class="d-flex justify-content-between align-items-center w-100"> -->
-                        <strong class="text-gray-dark">Sistem Informasi Kendaraan Dinas Kota Blitar</strong>
-                        <!-- <a href="#">Follow</a> -->
-                        <!-- </div> -->
-                        <span class="d-block">Integrated - Online - Realtime</span>
-                      </div>
-                    </div>
-
                   </div>
+                </div>
+
+                <div class="card-body p-0">
+                  <?php
+                  include '../../koneksi.php';
+                  $data = mysqli_query($koneksi, "SELECT * FROM layanan ORDER BY id DESC");
+                  while ($row = mysqli_fetch_array($data)) {
+                  ?>
+                    <div class="col-md-6 my-3 p-3 bg-body rounded shadow-sm">
+                      <div class="d-flex text-muted">
+                        <img src="file/<?= $row['foto_siswa']; ?>" class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="13%" height="13%" alt="...">
+                        <div class="mb-0 small lh-sm w-100">
+                          <strong class="text-gray-dark"><?= $row['nama']; ?></strong>
+                          <span class="d-block"><a href="#">Link App</a></span>
+                          <div class="d-flex mt-3">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                              <button type="button" class="btn btn-outline-secondary btn-sm">Edit</button>
+                              <button type="button" class="btn btn-outline-secondary btn-sm"><a href="hapus.php?id_siswa=<?= $row['id_siswa']; ?>">Hapus</a></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <?php } ?>
                 </div>
               </div>
             </div>

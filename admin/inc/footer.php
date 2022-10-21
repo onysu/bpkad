@@ -20,8 +20,10 @@
 
 <!-- jQuery -->
 <script src="../assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 5.2.2 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 <!-- AdminLTE App -->
 <script src="../assets/dist/js/adminlte.min.js"></script>
 <!-- dropzone -->
