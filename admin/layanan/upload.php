@@ -1,13 +1,14 @@
 <?php
-include 'koneksi.php';
+include '../../koneksi.php';
 
-$foto = $_FILES['foto_siswa']['name'];
-$tmp_foto = $_FILES['foto_siswa']['tmp_name'];
-$nama = $_POST['nm_siswa'];
+$foto = $_FILES['gambar']['name'];
+$tmp_foto = $_FILES['gambar']['tmp_name'];
+$nama = $_POST['nama'];
+$subnama = $_POST['subnama'];
+$link = $_POST['link'];
 // echo $nama;
 // echo $foto;
-move_uploaded_file($tmp_foto, 'file/' . $foto);
-$query = "INSERT INTO siswa SET nm_siswa='$nama', foto_siswa='$foto'";
+move_uploaded_file($tmp_foto, '../../file/img/' . $foto);
+$query = "INSERT INTO layanan SET nama='$nama', subnama='$subnama', link='$link', gambar='$foto'";
 mysqli_query($koneksi, $query);
 header('location:index.php');
-?>

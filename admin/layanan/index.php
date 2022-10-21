@@ -38,8 +38,6 @@
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">Aplikasi BPKAD</h3>
-                  <!-- <a class=xxx href="#"><i class="fab fa-github"></i> Github</a>
-                    <a class=xxx href="#"><i class="fas fa-cloud-download-alt"></i> Download</a> -->
                 </div>
 
                 <!-- Button trigger modal -->
@@ -48,22 +46,30 @@
                 </button>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="ModalLayanan" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Aplikasi</h1>
+                        <h1 class="modal-title fs-5" id="ModalLayanan">Tambah Aplikasi</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <form action="upload.php" method="post" enctype="multipart/form-data">
                         <div class="modal-body">
                           <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Nama Aplikasi</label>
-                            <input type="text" class="form-control" name="nm_siswa" id="exampleFormControlInput1" placeholder="nama aplikasi">
+                            <label for="nama" class="form-label">Nama Aplikasi</label>
+                            <input type="text" class="form-control" name="nama" placeholder="nama aplikasi">
                           </div>
                           <div class="mb-3">
-                            <label for="formFileSm" class="form-label">Pilih foto</label>
-                            <input class="form-control form-control-sm" name="foto_siswa" id="formFileSm" type="file">
+                            <label for="subnama" class="form-label">Sub Nama Aplikasi</label>
+                            <input type="text" class="form-control" name="subnama" placeholder="subnama aplikasi">
+                          </div>
+                          <div class="mb-3">
+                            <label for="link" class="form-label">Link Aplikasi</label>
+                            <input type="text" class="form-control" name="link" placeholder="link aplikasi">
+                          </div>
+                          <div class="mb-3">
+                            <label for="gambar" class="form-label">Pilih foto</label>
+                            <input class="form-control form-control-sm" name="gambar" type="file">
                           </div>
                         </div>
                         <div class="modal-footer">
@@ -83,14 +89,14 @@
                   ?>
                     <div class="col-md-6 my-3 p-3 bg-body rounded shadow-sm">
                       <div class="d-flex text-muted">
-                        <img src="file/<?= $row['foto_siswa']; ?>" class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="13%" height="13%" alt="...">
+                        <img src="file/<?= $row['gambar']; ?>" class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="13%" height="13%" alt="...">
                         <div class="mb-0 small lh-sm w-100">
                           <strong class="text-gray-dark"><?= $row['nama']; ?></strong>
                           <span class="d-block"><a href="#">Link App</a></span>
                           <div class="d-flex mt-3">
                             <div class="btn-group" role="group" aria-label="Basic example">
                               <button type="button" class="btn btn-outline-secondary btn-sm">Edit</button>
-                              <button type="button" class="btn btn-outline-secondary btn-sm"><a href="hapus.php?id_siswa=<?= $row['id_siswa']; ?>">Hapus</a></button>
+                              <button type="button" class="btn btn-outline-secondary btn-sm"><a href="hapus.php?id=<?= $row['id']; ?>">Hapus</a></button>
                             </div>
                           </div>
                         </div>
