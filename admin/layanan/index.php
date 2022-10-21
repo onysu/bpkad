@@ -68,7 +68,7 @@
                             <input type="text" class="form-control" name="link" placeholder="link aplikasi">
                           </div>
                           <div class="mb-3">
-                            <label for="gambar" class="form-label">Pilih foto</label>
+                            <label for="gambar" class="form-label">Pilih Gambar</label>
                             <input class="form-control form-control-sm" name="gambar" type="file">
                           </div>
                         </div>
