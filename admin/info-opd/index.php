@@ -124,7 +124,7 @@ $data_info = select("SELECT * FROM infoopd");
                           <th scope="row"><?= $no++ ?></th>
                           <td><?= $infoopd['keterangan']; ?></td>
                           <td><?= $infoopd['file']; ?></td>
-                          <td><a href="<?= $infoopd['dokumen']; ?>" target="_blank"><?= $infoopd['dokumen']; ?></a></td>
+                          <td><a href="files/<?= $infoopd['dokumen']; ?>" target="_blank"><?= $infoopd['dokumen']; ?></a></td>
                           <td><?= date('d/m/Y H:i:s', strtotime($infoopd['tgl_upload'])); ?></td>
                           <td>
                             <a href="#" class="btn btn-success btn-sm">Edit</a>
