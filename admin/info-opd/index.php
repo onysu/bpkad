@@ -1,3 +1,23 @@
+<?php
+
+include '../../koneksi.php';
+function select($query)
+{
+  // global koneksi db
+  global $koneksi;
+
+  $result = mysqli_query($koneksi, $query);
+  $rows = [];
+
+  while ($row = mysqli_fetch_assoc($result)) {
+    $rows[] = $row;
+  }
+  return $rows;
+}
+$title = 'Daftar Barang';
+$data_info = select("SELECT * FROM infoopd");
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 
@@ -15,7 +35,7 @@
         <div class="container">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1>Layanan</h1>
+              <h1>Informasi OPD</h1>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right small">
@@ -23,7 +43,7 @@
                 <li class="breadcrumb-item"><a href="profil.html">profil</a></li>
                 <li class="breadcrumb-item"><a href="struktur.html">struktur</a></li>
                 <li class="breadcrumb-item"><a href="info-opd.html">info</a></li>
-                <li class="breadcrumb-item active">layanan</li>
+                <li class="breadcrumb-item active">infoOPD</li>
               </ol>
             </div>
           </div>
@@ -37,12 +57,12 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Aplikasi BPKAD</h3>
+                  <h3 class="card-title">Info OPD BPKAD</h3>
                 </div>
 
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  Tambah Aplikasi
+                  Tambah Dokumen
                 </button>
 
                 <!-- Modal -->
@@ -50,7 +70,7 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="ModalLayanan">Tambah Aplikasi</h1>
+                        <h1 class="modal-title fs-5" id="ModalLayanan">Tambah Dokumen</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -82,28 +102,34 @@
                 </div>
 
                 <div class="card-body p-0">
-                  <?php
-                  include '../../koneksi.php';
-                  $data = mysqli_query($koneksi, "SELECT * FROM layanan ORDER BY id DESC");
-                  while ($row = mysqli_fetch_array($data)) {
-                  ?>
-                    <div class="col-md-6 my-3 p-3 bg-body rounded shadow-sm">
-                      <div class="d-flex text-muted">
-                        <img src="file/<?= $row['gambar']; ?>" class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="13%" height="13%" alt="...">
-                        <div class="mb-0 small lh-sm w-100">
-                          <strong class="text-gray-dark"><?= $row['nama']; ?></strong>
-                          <span class="d-block text-gray-dark"><?= $row['subnama']; ?></span>
-                          <span class="d-block"><a href="<?= $row['link']; ?>" target="_blank">Link Aplikasi</a></span>
-                          <div class="d-flex mt-3">
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                              <button type="button" class="btn btn-outline-secondary btn-sm">Edit</button>
-                              <button type="button" class="btn btn-outline-secondary btn-sm"><a href="hapus.php?id=<?= $row['id']; ?>">Hapus</a></button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  <?php } ?>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Keterangan</th>
+                        <th scope="col">File</th>
+                        <th scope="col">Dokumen</th>
+                        <th scope="col">Tanggal Upload</th>
+                        <th>Menu</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php $no = 1; ?>
+                      <?php foreach ($data_info as $infoopd) : ?>
+                        <tr>
+                          <th scope="row"><?= $no++ ?></th>
+                          <td><?= $infoopd['keterangan']; ?></td>
+                          <td><?= $infoopd['file']; ?></td>
+                          <td><a href="<?= $infoopd['dokumen']; ?>" target="_blank">Perjanjian Kinerja 2021</a></td>
+                          <td><?= $infoopd['tgl_upload']; ?></td>
+                          <td>
+                            <a href="#" class="btn btn-success">Edit</a>
+                            <a href="#" class="btn btn-danger">Hapus</a>
+                          </td>
+                        </tr>
+                      <?php endforeach; ?>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

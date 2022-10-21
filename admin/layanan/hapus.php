@@ -1,9 +1,9 @@
 <?php
 
-include 'koneksi.php';
+include '../../koneksi.php';
 
 // SQL untuk menghapus data
-$sql = "DELETE FROM siswa WHERE id_siswa=id_siswa";
+$sql = "DELETE FROM layanan WHERE id=id";
 
 if ($koneksi->query($sql) === TRUE) {
   echo "Data berhasil dihapus";
