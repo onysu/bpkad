@@ -1,7 +1,7 @@
 # bpkad
  Website BPKAD Kota Blitar
 
- # <a href="https://onysu.github.io/bpkad/index.html" target="_blank">Demo</a>
+
 
 Versi: 5
   - Bootstrap yang diperbarui ke versi 5.2.2
