@@ -69,6 +69,38 @@
   <div class="container">
     <h6 class="border-bottom lead pb-2 mb-0">Aplikasi BPKAD</h6>
 
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Tambah Aplikasi
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Aplikasi</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nama Aplikasi</label>
+                <input type="text" class="form-control" name="nm_siswa" id="exampleFormControlInput1" placeholder="nama aplikasi">
+              </div>
+              <div class="mb-3">
+                <label for="formFileSm" class="form-label">Pilih foto</label>
+                <input class="form-control form-control-sm" name="foto_siswa" id="formFileSm" type="file">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Batal</button>
+              <button type="submit" class="btn btn-outline-secondary btn-sm">Simpan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <?php
     include 'koneksi.php';
@@ -78,12 +110,15 @@
       <div class="col-md-6 my-3 p-3 bg-body rounded shadow-sm">
         <div class="d-flex text-muted">
           <img src="file/<?= $row['foto_siswa']; ?>" class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="13%" height="13%" alt="...">
-          <div class="pb-3 mb-0 small lh-sm w-100">
-            <div class="d-flex justify-content-between">
-              <strong class="text-gray-dark"><?= $row['nm_siswa']; ?></strong>
-              <a href="#">Follow</a>
-            </div>
+          <div class="mb-0 small lh-sm w-100">
+            <strong class="text-gray-dark"><?= $row['nm_siswa']; ?></strong>
             <span class="d-block"><a href="#">Link App</a></span>
+            <div class="d-flex mt-3">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary btn-sm">Edit</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm"><a href="hapus.php?id_siswa=<?= $row['id_siswa']; ?>">Hapus</a></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
