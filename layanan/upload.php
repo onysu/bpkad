@@ -10,3 +10,4 @@ move_uploaded_file($tmp_foto, 'file/' . $foto);
 $query = "INSERT INTO siswa SET nm_siswa='$nama', foto_siswa='$foto'";
 mysqli_query($koneksi, $query);
 header('location:index.php');
+?>
