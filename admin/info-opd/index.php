@@ -39,10 +39,10 @@ $data_info = select("SELECT * FROM infoopd");
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right small">
-                <li class="breadcrumb-item"><a href="index.html">beranda</a></li>
-                <li class="breadcrumb-item"><a href="profil.html">profil</a></li>
-                <li class="breadcrumb-item"><a href="struktur.html">struktur</a></li>
-                <li class="breadcrumb-item"><a href="info-opd.html">info</a></li>
+                <li class="breadcrumb-item"><a href="../">beranda</a></li>
+                <li class="breadcrumb-item"><a href="profil.php">profil</a></li>
+                <li class="breadcrumb-item"><a href="struktur.php">struktur</a></li>
+                <li class="breadcrumb-item"><a href="/admin/info-opd/index.php">info</a></li>
                 <li class="breadcrumb-item active">infoOPD</li>
               </ol>
             </div>
