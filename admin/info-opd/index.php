@@ -71,7 +71,7 @@ $data_info = select("SELECT * FROM infoopd");
                         <h1 class="modal-title fs-5" id="ModalTambahDokumen">Tambah Dokumen</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
-                      <form action="upload.php" method="post" enctype="multipart/form-data">
+                      <form action="tambah.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" class="form-control" name="id_info">
                         <div class="modal-body">
                           <div class="mb-3">
