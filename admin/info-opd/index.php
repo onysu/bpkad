@@ -117,7 +117,7 @@ $data_info = select("SELECT * FROM infoopd");
                       </div>
 
                       <?php foreach ($data_info as $ubahinfo) : ?>
-                        <form action="edit.php" method="post" enctype="multipart/form-data">
+                        <form action="" method="post" enctype="multipart/form-data">
                           <input type="hidden" class="form-control" name="id_info" value="<?= $ubahinfo['id_info']; ?>">
                           <div class=" modal-body">
                             <div class="mb-3">
@@ -135,11 +135,11 @@ $data_info = select("SELECT * FROM infoopd");
                             </div>
                             <div class="mb-3">
                               <label for="dokumen" class="form-label">Dokumen</label>
-                              <input type="file" class="form-control" name="dokumen" value="<?= $ubahinfo['dokumen']; ?>" placeholder="file dokumen" required>
+                              <input type="file" class="form-control" name="dokumen" value="" required>Sebelumnya : <?= $ubahinfo['dokumen']; ?>
                             </div>
                             <div class="mb-3">
                               <label for="tanggal" class="form-label">Tanggal Upload</label>
-                              <input class="form-control form-control-sm" name="tgl_upload" type="date" value="value=" <?= $ubahinfo['tgl_upload']; ?>">
+                              <input class="form-control form-control-sm" name="tgl_upload" type="date" value="">Sebelumnya : <?= $ubahinfo['tgl_upload']; ?>
                             </div>
                           </div>
                           <div class="modal-footer">
