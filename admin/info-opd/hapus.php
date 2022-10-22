@@ -13,6 +13,6 @@ $sql = "DELETE FROM infoopd WHERE id_info = $id_info";
 if (mysqli_query($koneksi, $sql)) {
   echo "Data berhasil dihapus";
 } else {
-  echo "Kesalahan menghapus rekaman: " . mysqli_error($koneksi);
+  echo "Kesalahan menghapus data: " . mysqli_error($koneksi);
 }
 header('location:index.php');
