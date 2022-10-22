@@ -14,7 +14,6 @@ function select($query)
   }
   return $rows;
 }
-$title = 'Daftar Barang';
 $data_info = select("SELECT * FROM infoopd");
 ?>
 
@@ -109,46 +108,50 @@ $data_info = select("SELECT * FROM infoopd");
                 <!-- <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#editDokumen">Edit Dokumen</button> -->
 
                 <!-- Modal -->
-                <!-- <div class="modal fade" id="editDokumen" tabindex="-1" aria-labelledby="ModalEditDokumen" aria-hidden="true">
+                <div class="modal fade" id="editDokumen" tabindex="-1" aria-labelledby="ModalEditDokumen" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h1 class="modal-title fs-5" id="ModalEditDokumen">Edit Dokumen</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
-                      <form action="edit.php" method="post" enctype="multipart/form-data">
-                        <input type="hidden" class="form-control" name="id_info" value="<?= $infoopd['id_info']; ?>>
-                        <div class="modal-body">
-                          <div class="mb-3">
-                            <label for="keterangan" class="form-label">Keterangan</label>
-                            <input type="text" class="form-control" name="keterangan" value="<?= $infoopd['keterangan']; ?>" placeholder="keterangan dokumen" required>
+
+                      <?php foreach ($data_info as $ubahinfo) : ?>
+                        <form action="edit.php" method="post" enctype="multipart/form-data">
+                          <input type="hidden" class="form-control" name="id_info" value="<?= $ubahinfo['id_info']; ?>">
+                          <div class=" modal-body">
+                            <div class="mb-3">
+                              <label for="keterangan" class="form-label">Keterangan</label>
+                              <input type="text" class="form-control" name="keterangan" value="<?= $ubahinfo['keterangan']; ?>" placeholder="keterangan dokumen" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="file" class="form-label">Jenis File</label>
+                              <select name="file" id="file" class="form-control" required>
+                                <option value=""><?= $ubahinfo['file']; ?></option>
+                                <option value=".pdf">.pdf</option>
+                                <option value=".zip">.zip</option>
+                                <option value=".rar">.rar</option>
+                              </select>
+                            </div>
+                            <div class="mb-3">
+                              <label for="dokumen" class="form-label">Dokumen</label>
+                              <input type="file" class="form-control" name="dokumen" value="<?= $ubahinfo['dokumen']; ?>" placeholder="file dokumen" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="tanggal" class="form-label">Tanggal Upload</label>
+                              <input class="form-control form-control-sm" name="tgl_upload" type="date" value="value=" <?= $ubahinfo['tgl_upload']; ?>">
+                            </div>
                           </div>
-                          <div class="mb-3">
-                            <label for="file" class="form-label">Jenis File</label>
-                            <select name="file" id="file" class="form-control" required>
-                              <option value="">-- jenis file --</option>
-                              <option value=".pdf">.pdf</option>
-                              <option value=".zip">.zip</option>
-                              <option value=".rar">.rar</option>
-                            </select>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-warning btn-sm">Simpan</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Batal</button>
                           </div>
-                          <div class="mb-3">
-                            <label for="dokumen" class="form-label">Dokumen</label>
-                            <input type="file" class="form-control" name="dokumen" value="<?= $infoopd['dokumen']; ?>" placeholder="file dokumen" required>
-                          </div>
-                          <div class="mb-3">
-                            <label for="tanggal" class="form-label">Tanggal Upload</label>
-                            <input class="form-control form-control-sm" name="tgl_upload" type="date" value="value="<?= $infoopd['tgl_upload']; ?>">
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="submit" class="btn btn-warning btn-sm">Simpan</button>
-                          <button type="button" class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Batal</button>
-                        </div>
-                      </form>
+                        </form>
+                      <?php endforeach; ?>
+
                     </div>
                   </div>
-                </div> -->
+                </div>
 
                 <div class="card-body p-0">
                   <table class="table">
@@ -172,7 +175,8 @@ $data_info = select("SELECT * FROM infoopd");
                           <td><a href="../../files/<?= $infoopd['dokumen']; ?>" target="_blank"><?= $infoopd['dokumen']; ?></a></td>
                           <td><?= date('d/m/Y H:i:s', strtotime($infoopd['tgl_upload'])); ?></td>
                           <td>
-                            <a href="edit.php?id_info=<?= $infoopd['id_info']; ?>" class="btn btn-success btn-sm">Edit</a>
+                            <a href="edit.php?id_info=<?= $ubahinfo['id_info']; ?>" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#editDokumen">Edit</a>
+
                             <a href="hapus.php?id_info=<?= $infoopd['id_info']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah data ini akan di hapus?');">Hapus</a>
                           </td>
                         </tr>
