@@ -2,10 +2,10 @@
 
 include '../../koneksi.php';
 $id_info = $_GET['id_info'];
-// ambil dahulu gambar sesuai data yg dipilih
+// ambil dahulu dokumen sesuai data yg dipilih
 $dokumen = mysqli_query($koneksi, "SELECT * FROM infoopd WHERE id_info = $id_info");
-$result = mysqli_fetch_assoc($dokumen);
-unlink("../../files/" . $result['dokumen']);
+$hasil = mysqli_fetch_assoc($dokumen);
+unlink("../../files/" . $hasil['dokumen']);
 
 $sql = "DELETE FROM infoopd WHERE id_info = $id_info";
 
