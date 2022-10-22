@@ -1,8 +1,9 @@
 <?php
 
 include '../../koneksi.php';
-$id_info = $_GET['id_info'];
+
 // ambil dahulu dokumen sesuai data yg dipilih
+$id_info = $_GET['id_info'];
 $dokumen = mysqli_query($koneksi, "SELECT * FROM infoopd WHERE id_info = $id_info");
 $hasil = mysqli_fetch_assoc($dokumen);
 unlink("../../files/" . $hasil['dokumen']);
